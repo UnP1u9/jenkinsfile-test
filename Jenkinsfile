@@ -1,4 +1,7 @@
 pipeline {
+    agent any
+
+    stages {
     stage('Checkout') {
         //disable to recycle workspace data to save time/bandwidth
         deleteDir()
@@ -41,4 +44,5 @@ pipeline {
         milestone()
         echo "Deploying..."
     }
+}
 }
